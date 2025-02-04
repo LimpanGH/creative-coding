@@ -1,13 +1,13 @@
-// import React from 'React';
 import classes from './Controls.module.css';
 
 interface ControlProps {
   onColorChange: (color: string) => void;
   onSizeChange: (size: number) => void;
+  onExport: () => void;
   size: number;
 }
 
-const Controls: React.FC<ControlProps> = ({ onColorChange, onSizeChange, size }) => (
+const Controls: React.FC<ControlProps> = ({ onColorChange, onSizeChange, size, onExport }) => (
   <div className={classes['controls']}>
     <div className={classes['controlItem']}>
       <label>Pick a color:</label>
@@ -23,6 +23,10 @@ const Controls: React.FC<ControlProps> = ({ onColorChange, onSizeChange, size })
         value={size}
         onChange={(e) => onSizeChange(Number(e.target.value))}
       />
+    </div>
+
+    <div className={classes['controlItem']}>
+      <button onClick={onExport}>Export as SVG</button>
     </div>
   </div>
 );
