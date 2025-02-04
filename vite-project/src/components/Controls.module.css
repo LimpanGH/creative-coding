@@ -1,0 +1,20 @@
+* {
+    border: dotted red 1px;
+}
+
+.controls{
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    width: 200px;
+}
+
+.controlItem{
+    padding: 8px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
